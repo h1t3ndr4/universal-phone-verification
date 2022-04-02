@@ -82,4 +82,5 @@ app.get("/verify", (req, res) => {
 // listen to the server at 3000 port
 app.listen(port, () => {
   console.log(`Server is running at ${port}`);
+  console.log("You can send OTP for verification");
 });

@@ -1,0 +1,1 @@
+web: node ./Verification/index.js
