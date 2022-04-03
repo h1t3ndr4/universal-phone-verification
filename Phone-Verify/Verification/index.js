@@ -34,7 +34,7 @@ app.get("/login", (req, res) => {
     client.verify
       .services(process.env.SERVICE_ID)
       .verifications.create({
-        to: `+91${req.query.phonenumber}`,
+        to: `+${req.query.phonenumber}`,
         channel: req.query.channel === "call" ? "call" : "sms",
       })
       .then((data) => {
@@ -59,7 +59,7 @@ app.get("/verify", (req, res) => {
     client.verify
       .services(process.env.SERVICE_ID)
       .verificationChecks.create({
-        to: `+91${req.query.phonenumber}`,
+        to: `+${req.query.phonenumber}`,
         code: req.query.code,
       })
       .then((data) => {
